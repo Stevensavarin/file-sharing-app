@@ -1,18 +1,11 @@
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-## Getting Started
+## Getting Started:
 
-First, run the development server:
-
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+1. Clone the repository.
+2. Install dependencies using `npm install`.
+3. Configure Firebase and Resend API keys.
+4. Run the application using `npm run dev`.
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
@@ -20,17 +13,22 @@ You can start editing the page by modifying `app/page.js`. The page auto-updates
 
 This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
 
-## Learn More
+# File Sharing App
 
-To learn more about Next.js, take a look at the following resources:
+File Sharing App is an advanced web application developed using cutting-edge technologies to provide a secure and efficient file-sharing experience. This project leverages leading web development technologies such as Next.js 14, React.js, Tailwind CSS, Firebase, and Clerk to deliver an intuitive and functional interface.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Technologies Used:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+- **Next.js 14:** The application is built on the foundation of Next.js ensuring optimal performance and smooth navigation.
 
-## Deploy on Vercel
+- **Tailwind CSS:** Elegant and responsive design is achieved through Tailwind CSS, a utility-first styling framework that enables rapid and consistent development.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- **Firebase:** Integration with Firebase provides a robust and scalable backend. User authentication, file storage, and database management are handled efficiently with Firebase.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+- **Clerk:** Clerk is used for authentication, providing an additional layer of security and easy user identity management.
+
+- **Resend:** Email sending functionality is implemented using Resend, allowing file sharing via email and providing the option to protect files with a unique access key.
+
+## Contributing:
+
+Contributions are welcome! Feel free to open issues and pull requests.
