@@ -36,7 +36,7 @@ function Header() {
           </li> */}
 
           <li>
-            <a className="text-gray-500 transition hover:text-gray-500/75" href="https://stevensawarin.com/">
+            <a className="text-gray-500 transition hover:text-gray-500/75" href="/upload">
               Contact Us
             </a>
           </li>
