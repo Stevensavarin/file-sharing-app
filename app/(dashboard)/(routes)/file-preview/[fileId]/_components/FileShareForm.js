@@ -87,10 +87,10 @@ function FileShareForm({ file,onPasswordSave }) {
             </div>:null}
 
             <div className='border rounded-md p-3 mt-5'>
-                    <label className='text-[14px] text-gray-500'>Send File to Email</label>
+                    <label className='text-[14px] text-gray-500'>Send File to Email - This option is currently unavailable.</label>
                     <div className='border rounded-md p-2'>
                     <input type="email" 
-                    placeholder="This option is currently unavailable. Copy and share the URL (you can also add a password to your URL)"
+                    placeholder="Copy and share the URL (you can also add a password to your URL)"
                     disabled
                     className=' bg-transparent
                     outline-none w-full' 
