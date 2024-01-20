@@ -22,7 +22,7 @@ function FileShareForm({ file,onPasswordSave }) {
             fileName:file.fileName,
             fileSize:file.fileSize,
             fileType:file.fileType,
-            shortUrl:`http://localhost:3000/f/${file.shortUrl.split('/').pop()}`,
+            shortUrl:`https://chipper-souffle-bd631c.netlify.app/f/${file.shortUrl.split('/').pop()}`,
         }
         GlobalApi.SendEmail(data).then(resp=>{
             console.log(resp);
@@ -35,7 +35,7 @@ function FileShareForm({ file,onPasswordSave }) {
 
     const onCopyClick = () => {
         if (file && file.shortUrl) {
-            const completeUrl = `http://localhost:3000/f/${file.shortUrl.split('/').pop()}`;
+            const completeUrl = `https://chipper-souffle-bd631c.netlify.app/f/${file.shortUrl.split('/').pop()}`;
             navigator.clipboard.writeText(completeUrl);
             setToast({
                 status: 'Copied',
@@ -51,10 +51,9 @@ function FileShareForm({ file,onPasswordSave }) {
             <div>
                 <label className='text-[14px] text-gray-500'>Short Url</label>
                 <div className='flex gap-5 p-2 border rounded-md justify-between'>
-                    {/* Construir la URL completa con el formato deseado */}
                     <input
                         type="text"
-                        value={`http://localhost:3000/f/${file.shortUrl.split('/').pop()}`}
+                        value={`https://chipper-souffle-bd631c.netlify.app/f/${file.shortUrl.split('/').pop()}`}
                         disabled
                         className='disabled:text-gray-500 bg-transparent outline-none w-full'
                     />
