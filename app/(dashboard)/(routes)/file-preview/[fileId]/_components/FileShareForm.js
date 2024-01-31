@@ -22,7 +22,7 @@ function FileShareForm({ file,onPasswordSave }) {
             fileName:file.fileName,
             fileSize:file.fileSize,
             fileType:file.fileType,
-            shortUrl:file?.shortUrl
+            shortUrl:`https://www.stevensavarin.com/f/${file.shortUrl.split('/').pop()}`,
         }
         GlobalApi.SendEmail(data).then(resp=>{
             console.log(resp);
@@ -33,25 +33,35 @@ function FileShareForm({ file,onPasswordSave }) {
         })
     }
 
-    const onCopyClick=()=>{
-        navigator.clipboard.writeText(file.shortUrl);
-        setToast({
-            status:'Copied',
-            msg:'Url Copied!'
-        })
-
+    const onCopyClick = () => {
+        if (file && file.shortUrl) {
+            const completeUrl = `https://www.stevensavarin.com/f/${file.shortUrl.split('/').pop()}`;
+            navigator.clipboard.writeText(completeUrl);
+            setToast({
+                status: 'Copied',
+                msg: 'Url Copied!'
+            });
+        } else {
+            console.error("File or file.shortUrl is undefined");
+        }
     }
+    
     return file && (
         <div className='flex flex-col gap-2'>
             <div>
-            <label className='text-[14px] text-gray-500'>Short Url</label>
-            <div className='flex gap-5 p-2 border rounded-md justify-between'>
-                <input type="text" value={file.shortUrl} disabled
-                    className='disabled:text-gray-500 bg-transparent
-                    outline-none w-full' />
-                <Copy className='text-gray-400 hover:text-gray-600 
-                cursor-pointer' onClick={()=>onCopyClick()} />
-            </div>
+                <label className='text-[14px] text-gray-500'>Short Url</label>
+                <div className='flex gap-5 p-2 border rounded-md justify-between'>
+                    <input
+                        type="text"
+                        value={`https://www.stevensavarin.com/f/${file.shortUrl.split('/').pop()}`}
+                        disabled
+                        className='disabled:text-gray-500 bg-transparent outline-none w-full'
+                    />
+                    <Copy
+                        className='text-gray-400 hover:text-gray-600 cursor-pointer'
+                        onClick={() => onCopyClick()}
+                    />
+                </div>
           
             </div>
             <div className='gap-3 flex mt-5'>
@@ -70,7 +80,7 @@ function FileShareForm({ file,onPasswordSave }) {
                  outline-none' onChange={(e)=>setPassword(e.target.value)}/>
             </div>
             <button className='p-2 bg-primary text-white
-                rounded-md disabled:bg-gray-300 hover:bg-blue-600' 
+                rounded-md disabled:bg-gray-300 hover:bg-green-600' 
                 disabled={password?.length<3}
                 onClick={()=>onPasswordSave(password)}
                 >Save</button>
@@ -87,7 +97,7 @@ function FileShareForm({ file,onPasswordSave }) {
                     />
                 </div>
                 <button  className='p-2 disabled:bg-gray-300
-                 bg-primary text-white hover:bg-blue-600
+                 bg-primary text-white hover:bg-green-600
                 w-full mt-2 rounded-md'
                 disabled={email?.length<3}
                 onClick={()=>sendEmail()}
