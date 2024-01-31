@@ -100,7 +100,7 @@ export const EmailTemplate = ({ responce }) => (
               color: 'rgb(0,0,0, 0.7)',
             }}
           >
-            © 2024 | Steven Savarin @2024 Copyrights E.S.P. | www.stevensawarin.com
+            © 2024 | Steven Savarin @2024 Copyrights E.S.P. | www.stevensavarin.com
           </Text>
         </Container>
       </Body>
