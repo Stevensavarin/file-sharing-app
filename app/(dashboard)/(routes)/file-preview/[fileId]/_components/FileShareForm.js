@@ -87,11 +87,10 @@ function FileShareForm({ file,onPasswordSave }) {
             </div>:null}
 
             <div className='border rounded-md p-3 mt-5'>
-                    <label className='text-[14px] text-gray-500'>Send File to Email - This option is currently unavailable.</label>
+                    <label className='text-[14px] text-gray-500'>Send File to Email</label>
                     <div className='border rounded-md p-2'>
                     <input type="email" 
-                    placeholder="Copy and share the URL (you can also add a password to your URL)"
-                    disabled
+                    placeholder='example@gmail.com'
                     className=' bg-transparent
                     outline-none w-full' 
                     onChange={(e)=>setEmail(e.target.value)}
