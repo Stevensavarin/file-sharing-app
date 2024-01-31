@@ -51,6 +51,7 @@ function FileShareForm({ file,onPasswordSave }) {
             <div>
                 <label className='text-[14px] text-gray-500'>Short Url</label>
                 <div className='flex gap-5 p-2 border rounded-md justify-between'>
+   
                     <input
                         type="text"
                         value={`https://www.stevensavarin.com/f/${file.shortUrl.split('/').pop()}`}
