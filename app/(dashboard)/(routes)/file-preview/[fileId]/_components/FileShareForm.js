@@ -22,7 +22,7 @@ function FileShareForm({ file,onPasswordSave }) {
             fileName:file.fileName,
             fileSize:file.fileSize,
             fileType:file.fileType,
-            shortUrl:`https://www.stevensavarin.com/f/${file.shortUrl}`,
+            shortUrl:`https://www.stevensavarin.com/f/${file.shortUrl.split('/').pop()}`,
         }
         GlobalApi.SendEmail(data).then(resp=>{
             console.log(resp);
@@ -35,7 +35,7 @@ function FileShareForm({ file,onPasswordSave }) {
 
     const onCopyClick = () => {
         if (file && file.shortUrl) {
-            const completeUrl = `https://www.stevensavarin.com/f/${file.shortUrl}`;
+            const completeUrl = `https://www.stevensavarin.com/f/${file.shortUrl.split('/').pop()}`;
             navigator.clipboard.writeText(completeUrl);
             setToast({
                 status: 'Copied',
@@ -54,7 +54,7 @@ function FileShareForm({ file,onPasswordSave }) {
    
                     <input
                         type="text"
-                        value={`https://www.stevensavarin.com/f/${file.shortUrl}`}
+                        value={`https://www.stevensavarin.com/f/${file.shortUrl.split('/').pop()}`}
                         disabled
                         className='disabled:text-gray-500 bg-transparent outline-none w-full'
                     />
