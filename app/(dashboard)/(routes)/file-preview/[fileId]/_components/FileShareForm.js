@@ -54,7 +54,7 @@ function FileShareForm({ file,onPasswordSave }) {
    
                     <input
                         type="text"
-                        value={`https://www.stevensavarin.com/f/${file.shortUrl.split('/').pop()}`}
+                        value={`https://www.stevensavarin.com/f/${file.shortUrl.replace(/^.*[\\/]/, '')}`}
                         disabled
                         className='disabled:text-gray-500 bg-transparent outline-none w-full'
                     />
