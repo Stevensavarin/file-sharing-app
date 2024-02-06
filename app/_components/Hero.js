@@ -1,3 +1,5 @@
+"use client"
+
 import React, { useEffect } from 'react';
 import Constant from '../_utils/Constant';
 
