@@ -34,8 +34,8 @@ function Upgrade() {
 
   return (
     <div style={containerStyle}>
-      <h1 style={headingStyle}>Welcome to My Awesome App!</h1>
-      <p style={paragraphStyle}>Created By Steven Savarin</p>
+      <h1 style={headingStyle}>Welcome to my awesome App!</h1>
+      <p style={paragraphStyle}>Created by Steven Savarin</p>
       <p style={paragraphStyle}>Upload, Save and easily Share your files in one place.</p>
       <div>
         {/* Enlaces a redes sociales */}
