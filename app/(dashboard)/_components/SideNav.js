@@ -20,7 +20,7 @@ function SideNav({closeSideBar}) {
         },
         {
             id:3,
-            name:'Created By',
+            name:'About Me',
             icon:Shield,
             path:'/upgrade'
         },
