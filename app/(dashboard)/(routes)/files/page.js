@@ -30,11 +30,11 @@ function Files() {
   }
   return (
     <div className='p-5'>
-      <h2 className='text-[20px]'>My Files</h2>
+      <h2 className='text-[20px]'>My files</h2>
     
       {fileList.length==0?
       <>
-       <h2 className='mb-6'> You dont have any File</h2>
+       <h2 className='mb-6'> You dont have any file</h2>
         <Link href={process.env.NEXT_PUBLIC_BASE_URL} 
         className='p-2 text-white bg-primary rounded-md mt-7'>
           Upload Now
