@@ -77,8 +77,8 @@ const saveInfo = async (file, fileUrl) => {
     <div className='p-5 px-8 md:px-28 text-center'>
       {!uploadCompleted?<div>
       <h2 className='text-[20px] text-center m-5'>Start 
-        <strong className='text-primary'> Uploading </strong> 
-        File and <strong className='text-primary'> Share</strong> it</h2>
+        <strong className='text-primary'> uploading </strong> 
+        files and <strong className='text-primary'> share</strong> it</h2>
 
 <UploadForm 
       uploadBtnClick={(file)=>uploadFile(file)} 
