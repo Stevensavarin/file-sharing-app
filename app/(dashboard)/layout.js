@@ -6,6 +6,19 @@ import Toast from '../_components/Toast';
 
 function layout({ children }) {
   const [toggle, setToggle] = useState(false);
+
+  useEffect(() => {
+    // Cargar el script de Google AdSense u otro script aquí
+    const script = document.createElement('script');
+    script.src = 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7761286844545012';
+    script.async = true;
+    script.crossOrigin = 'anonymous';
+    document.body.appendChild(script);
+
+    return () => {
+      document.body.removeChild(script);
+    };
+  }, []);
   
   return (
     // <ToastContext.Provider value={{toast,setToast}}>
