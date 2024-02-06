@@ -20,7 +20,7 @@ function Upload() {
   const uploadFile = (file) => {
     const metadata = { contentType: file.type };
     const storageRef = ref(storage, `file-upload/${file?.name}`);
-    const uploadTask = uploadBytesResumable(storageRef, file, file.type);
+    const uploadTask = uploadBytesResumable(storageRef, file, metadata);
 
     uploadTask.on('state_changed', (snapshot) => {
         const progress = (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
