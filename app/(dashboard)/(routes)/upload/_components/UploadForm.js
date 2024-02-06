@@ -40,7 +40,7 @@ function UploadForm({uploadBtnClick,progress}) {
                                 Click to upload </span>
                             or <strong className='text-primary'>
                                 drag</strong> and <strong className='text-primary'>drop</strong></p>
-                        <p className="text-xs text-black-500 dark:text-black-400">SVG, PNG, JPG or GIF and more...( Max Size : 2GB)</p>
+                        <p className="text-xs text-black-500 dark:text-black-400">SVG, PNG, JPG, GIF, PDF And Docs...( Max Size : 2GB)</p>
                     </div>
                     <input id="dropzone-file"
                         type="file" className="hidden"
