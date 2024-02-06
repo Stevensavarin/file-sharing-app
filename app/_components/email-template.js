@@ -18,7 +18,7 @@ export const EmailTemplate = ({ responce }) => (
   <div>
     <Html>
       <Head />
-      <Preview>File Shared With You</Preview>
+      <Preview>File shared with you</Preview>
       <Body style={main}>
         <Container>
           <Section style={content}>
@@ -69,10 +69,10 @@ export const EmailTemplate = ({ responce }) => (
                 </Text>
 
                 <Text style={paragraph}>
-                  Now You can also share a file with SaveEase App
+                  Now you can also share a file with SaveEase App
                 </Text>
                 <Text style={{ marginTop: -5 }}>
-                  Click Below Button to Access your file
+                  Click below button to access your file
                 </Text>
               </Column>
             </Row>
