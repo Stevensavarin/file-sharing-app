@@ -10,7 +10,7 @@ function UploadForm({ uploadBtnClick, progress }) {
     const onFileSelect = (file) => {
         console.log(file);
         if (file && file.size > 2000000000) { // Verifica si el tamaño del archivo excede 2GB
-            console.log("Size is greater than 2 GB");
+//            console.log("Size is greater than 2 GB");
             setErrorMsg('Maximum File Upload Size is 2GB');
             return;
         }
@@ -30,7 +30,7 @@ function UploadForm({ uploadBtnClick, progress }) {
                         <p className="mb-2 text-lg md:text-2xl text-black-500 dark:text-black-400">
                             <span className="font-semibold">Click to upload </span>
                             or <strong className='text-primary'>drag</strong> and <strong className='text-primary'>drop</strong></p>
-                        <p className="text-xs text-black-500 dark:text-black-400">SVG, PNG, JPG, GIF, M4A, MP3, MP4, EXE, RAR, ZIP ( Max Size: 2GB)</p>
+                        <p className="text-xs text-black-500 dark:text-black-400">SVG, PNG, JPG, GIF, M4A, MP3, MP4, RAR, ZIP</p>
                     </div>
                     <input id="dropzone-file" type="file" className="hidden" onChange={(event) => { onFileSelect(event.target.files[0]) }} accept=".svg,.png,.jpg,.jpeg,.gif,.m4a,.mp3,.mp4,.exe,.rar,.zip" />
                 </label>
